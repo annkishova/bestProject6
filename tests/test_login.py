@@ -9,7 +9,7 @@ from Forms.login_form import LoginForm
 
 
 class TestAuthorization:
-    def test_authorization(self, start_browser):
+    def test_authorization(self, navigate_start_page):
         with ("Перейти к форме авторизации"):
             login_form = LoginForm()
 
