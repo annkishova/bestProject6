@@ -10,10 +10,10 @@ from Forms.login_form import LoginForm
 
 class TestAuthorization:
     def test_authorization(self, navigate_start_page):
-        with ("Перейти к форме авторизации"):
-            login_form = LoginForm()
+        #"Перейти к форме авторизации"
+        login_form = LoginForm()
 
-        with ("Заполнить параметр Логин"):
-            random_name_login = str(uuid4())
-            user_name = login_form.fill_username(random_name_login)
-            assert user_name == "", "Имя не заполнено"
+        #"Заполнить параметр Логин"
+        random_name_login = str(uuid4())
+        user_name = login_form.fill_username(random_name_login)
+        assert user_name == "", "Имя не заполнено"
