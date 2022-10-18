@@ -1,10 +1,11 @@
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-driver = webdriver.Chrome(r'C:/chromedriver/chromedriver.exe')
 
 
 class LoginFormElements:
-    USERNAME = driver.find_element(By.XPATH, "//*[@id=\"user-name\"]")
+    driver = webdriver.Chrome(r'C:/chromedriver/chromedriver.exe')
+
+    USERNAME = driver.find_element(By.XPATH, "//*[@id=\"password\"]")
 
 
 class LoginForm:
