@@ -7,9 +7,9 @@ class BasePage:
 
 
 class LoginFormElements:
-    USERNAME = (By.XPATH, "//*[@id=\"user-name\"]")
-    PASSWORD = (By.XPATH, "//*[@id=\"password\"]")
-    LOGIN_BUTTON = (By.XPATH, "//*[@id=\"login-button\"]")
+    USERNAME = (By.XPATH, "//input[@id='user-name']")
+    PASSWORD = (By.XPATH, "//input[@id='password']")
+    LOGIN_BUTTON = (By.ID, "login-button")
 
 
 class LoginForm(BasePage):
