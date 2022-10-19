@@ -1,7 +1,6 @@
-import time
 import pytest
 from selenium import webdriver
-from Forms.login_form import LoginForm
+from tests.constants import Url
 
 
 @pytest.fixture(scope="function")
@@ -21,6 +20,6 @@ def start_browser():
 def navigate_start_page(start_browser):
     driver = start_browser
     #"Переход на стартовую страницу")
-    driver.get("https://www.saucedemo.com/")
+    driver.get(Url.login_url)
 
     yield driver
