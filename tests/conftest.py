@@ -23,4 +23,4 @@ def navigate_start_page(start_browser):
     #"Переход на стартовую страницу")
     driver.get("https://www.saucedemo.com/")
 
-    yield
+    yield driver

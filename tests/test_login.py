@@ -1,5 +1,6 @@
 from uuid import uuid4
 
+import pytest
 import time
 
 from selenium import webdriver
@@ -11,9 +12,10 @@ from Forms.login_form import LoginForm
 class TestAuthorization:
     def test_authorization(self, navigate_start_page):
         #"Перейти к форме авторизации"
-        login_form = LoginForm()
+        login_form = LoginForm(navigate_start_page)
 
         #"Заполнить параметр Логин"
-        random_name_login = str(uuid4())
-        user_name = login_form.fill_username(random_name_login)
-        assert user_name == "", "Имя не заполнено"
+        name_login = "standard_user"
+        pass_login = "secret_sauce"
+        login_form.fill_login_form(name_login, pass_login)
+        login_form.click_enter()
