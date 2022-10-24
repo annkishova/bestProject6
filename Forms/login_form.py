@@ -14,6 +14,7 @@ class LoginFormElements:
     PASSWORD = (By.XPATH, "//input[@id='password']")
     LOGIN_BUTTON = (By.ID, "login-button")
     ERROR_LABEL = (By.CLASS_NAME, "error-message-container")
+
     # IS_VISIBLE = expected_conditions.visibility_of_element_located
 
 
@@ -44,5 +45,8 @@ class LoginForm(BasePage):
         self.driver.find_element(*self.element.USERNAME).clear()
 
     def clear_password_login(self):
-        self.driver.find_element(*self.element.USERNAME).clear()
+        self.driver.find_element(*self.element.PASSWORD).clear()
 
+    def get_text(self, elem_name):
+        res = self.driver.find_element(By.XPATH, f"{elem_name}")
+        return res.text
