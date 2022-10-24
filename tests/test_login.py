@@ -1,4 +1,4 @@
-from Forms.login_form import LoginForm
+from forms.login_form import LoginForm
 from tests.constants import Sign, Url, ERROR
 from selenium.webdriver.common.by import By
 import random
